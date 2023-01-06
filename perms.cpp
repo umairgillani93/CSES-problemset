@@ -5,6 +5,7 @@ using namespace std;
 int main() {
 	int n;
 	cin >> n;
+	vector<int> opt;
 	
 	if (n == 1) {
 		cout << 1 << '\n';
@@ -15,9 +16,25 @@ int main() {
 	}
 
 	// 2 4 1 3
-	if (n % 2 == 0) {
-		for (int i = 2 i <= n; i += 2) {
-			cout << i << " ";
+	for (int i = 1; i <= n; i++) {
+		if (i % 2 == 0) {
+			opt.push_back(i);
+			
 		}
 	}
+	for (int i = 1; i <= n; i++) {
+		if (i % 2 != 0) {
+			opt.push_back(i);
+		}
+	}
+
+	for (int j = 0; j < n; j++) {
+		cout << opt[j] << "  ";
+	}
+
+	return 0;
+	
+
 }
+
+
