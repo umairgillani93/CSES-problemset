@@ -28,21 +28,40 @@ int main() {
 	ll s = 0;
 
 	for (int i = 0; i < main.size(); i++) {
-		if (s <= half) {
-			s += main[i];
-			
-			if (s <= half) {
-				first.push_back(main[i]);
-			}
-
-			else {
-				second.push_back(main[i]);
-			}
+		s += main[i];
+		
+		if (s > half) {
+			s -= main[i];
+			second.push_back(main[i]);
+		}
+		
+		else {
+			first.push_back(main[i]);
 		}
 	}
 
-	for (int i = 0; i < first.size(); i++) {
-		cout << first[i] << '\n';
+
+	int sum_first = accumulate(first.begin(), first.end(), 0);
+	int sum_second = accumulate(second.begin(), second.end(), 0);
+
+	if (sum_first == sum_second) {
+		cout << "YES" << '\n';
+		cout << first.size() << '\n';
+		for (auto k : first) {
+			cout << k << " ";
+		}
+
+		cout << '\n';
+		
+		cout << second.size() << '\n';
+		for (auto k : second) {
+			cout << k << " ";
+		}
+
+	}
+
+	else {
+		cout << "NO" << '\n';
 	}
 
 	return 0;
