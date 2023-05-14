@@ -20,7 +20,10 @@ int main() {
 	}
 
 	for (int j = 0; j < t; j++) {
-		if (P[j].first == 2 && P[j].second == 2) {
+		if (P[j].first == 0 || P[j].second == 0) {
+			cout << "NO" << '\n';
+		}
+		else if (P[j].first == 2 && P[j].second == 2) {
 			cout << "NO" << '\n';
 		}
 
@@ -30,6 +33,10 @@ int main() {
 
 		else if ((P[j].first == 2 && P[j].second == 1) || (P[j].first == 1 && P[j].second == 2)) {
 			cout << "YES" << '\n';
+		}
+		
+		else if (P[j].first == 4 && P[j].second == 4) {
+			cout << "NO" << '\n';
 		}
 
 		else {
