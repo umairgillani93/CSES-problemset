@@ -1,5 +1,6 @@
 #include <iostream>
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
@@ -44,8 +45,6 @@ int main() {
 		cout << '\n';
 		cout << second.size() << '\n';
 		for (long long j = 0; j < second.size(); j++) {
-			cout << second[j] << " ";
-		}
 	}
 
 }

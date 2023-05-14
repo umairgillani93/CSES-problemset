@@ -6,8 +6,14 @@ using namespace std;
 int main() {
 	int x;
 	cin >> x;
-	vector<int> V(x);
 
+	while (x != 0) {
+		x = x - 2;
+		cout << x << '\n';
+	}
+
+	cout << "x is: " << x << '\n';
+	return 0;
 
 }
 
