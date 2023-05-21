@@ -4,16 +4,24 @@
 using namespace std;
 
 int main() {
-	int x;
-	cin >> x;
+	int x, y;
+	cin >> x >> y;
+	while (true) {
+		x -= 2;
+		if (x == 0 || x < 0) {
+			break;
+		}
 
-	while (x != 0) {
-		x = x - 2;
-		cout << x << '\n';
+		else {
+			x -= 1;
+			if (x == 0 || x < 0) {
+				break;
+			}
+		}
+
 	}
+	cout << x << '\n';
 
-	cout << "x is: " << x << '\n';
 	return 0;
-
 }
 
