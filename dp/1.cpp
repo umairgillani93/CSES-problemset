@@ -20,9 +20,10 @@ void f(vector<int> &arr, int k, vector<int> &c, vector<vector<int>> &res) {
 }
 
 int main() {
-	vector<int> arr = {1,2,3,4,5,6};
+	vector<int> arr = {2,3,5};
 	vector<vector<int>> res;
-	int k = 3;
+	int k = 9;
+
 	vector<int> c;
 	f(arr, k, c, res);
 	for (auto &s: res) {
