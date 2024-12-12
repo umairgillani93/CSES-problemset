@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
-using namespace std;
 
-const int MOD = 1e9 + 7;
+using namespace std;
 
 int main() {
 	int n;
@@ -14,7 +13,6 @@ int main() {
 	}
 
 	vector<vector<int>> dp(n, vector<int>(n, 0));
-
 	if (a[0][0] == '.') {
 		dp[0][0] = 1;
 	}
@@ -26,17 +24,17 @@ int main() {
 			}
 			else {
 				if (i > 0) {
-					dp[i][j] = (dp[i][j] + dp[i - 1][j]) % MOD;
+					dp[i][j] = dp[i][j] + dp[i - 1][j];
 				}
 				if (j > 0) {
-					dp[i][j] = (dp[i][j] + dp[i][j - 1]) % MOD;
+					dp[i][j] = dp[i][j] + dp[i][j - 1];
 				}
 			}
 		}
 	}
+
 	cout << dp[n - 1][n - 1] << '\n';
-
 	return 0;
-}
 
+}
 
